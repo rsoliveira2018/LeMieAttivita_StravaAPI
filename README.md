@@ -6,3 +6,5 @@ Messing around with API requests thanks to Strava API and my own account rsolive
 - MVC
 - API Request Handling
 - MySQL Database
+- Entity Framework
+- Migrations
