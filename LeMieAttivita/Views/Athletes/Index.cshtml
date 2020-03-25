@@ -1,0 +1,84 @@
+﻿@model Athlete
+
+@{
+    ViewData["Title"] = "Athlete";
+}
+
+<h2>
+    @ViewData["Title"]
+</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowerCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.City)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.UpdatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.FollowerCount)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Weight)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+
+<h3>
+    <a>
+        <a asp-controller="Athletes" asp-action="Edit" class="btn btn-primary">
+            Update Your Information 
+        </a>
+    </a>
+</h3>

@@ -1,0 +1,22 @@
+﻿@model  Athlete
+
+@{
+    ViewData["Title"] = "Utilities";
+}
+
+<h2>
+    @ViewData["Title"]
+</h2>
+
+<hr />
+
+<h3>
+    <a asp-controller="Utilities" asp-action="GenerateNewAccessToken" asp-route-id="@Model.ApiToken.RefreshToken" class="btn btn-primary">
+        Generate New Access Token
+    </a>
+</h3>
+
+
+<br />
+
+<hr />

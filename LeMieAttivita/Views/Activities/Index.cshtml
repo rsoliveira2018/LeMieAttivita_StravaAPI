@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Activity>
+
+@{
+    ViewData["Title"] = "Activities";
+}
+
+<h2>
+    @ViewData["Title"]
+</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Distance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalElevationGain)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ride)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AverageSpeed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Distance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalElevationGain)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ride)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AverageSpeed)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<hr />
+
+<h3>
+    <a>
+        <a asp-controller="Activities" asp-action="Retrieve" class="btn btn-primary">
+            Retrieve Your List of Activities
+        </a>
+    </a>
+</h3>
+
+
+
+
+
+
